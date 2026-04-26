@@ -1,0 +1,262 @@
+:root {
+  --bg: #f4efe8;
+  --panel: rgba(255, 250, 244, 0.9);
+  --line: rgba(81, 57, 34, 0.12);
+  --text: #2f241c;
+  --muted: #736256;
+  --accent: #d06a3b;
+  --accent-2: #147b70;
+  --shadow: 0 24px 48px rgba(72, 48, 29, 0.12);
+}
+
+* { box-sizing: border-box; }
+html, body, #app { margin: 0; min-height: 100%; }
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(208, 106, 59, 0.16), transparent 22%),
+    radial-gradient(circle at top right, rgba(20, 123, 112, 0.12), transparent 20%),
+    var(--bg);
+}
+
+a { color: inherit; text-decoration: none; }
+
+.career-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+}
+
+.career-sidebar {
+  padding: 24px 18px;
+  background: #231912;
+  color: #fff4ec;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.career-brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.career-brand-mark {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  font-weight: 700;
+}
+
+.career-brand p,
+.career-note p,
+.muted-text,
+.hero-copy {
+  color: var(--muted);
+}
+
+.career-nav {
+  display: grid;
+  gap: 10px;
+}
+
+.career-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  color: rgba(255, 244, 236, 0.84);
+}
+
+.career-nav-item.active,
+.career-nav-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.career-main {
+  padding: 26px;
+}
+
+.career-stack,
+.panel-grid,
+.stats-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.hero-card,
+.panel-card,
+.stat-card {
+  border-radius: 26px;
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.hero-card h1 {
+  margin: 0;
+  max-width: 860px;
+  font-size: clamp(2.1rem, 3.6vw, 4rem);
+  line-height: 1.08;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+}
+
+.stats-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stat-card strong {
+  display: block;
+  margin: 16px 0 8px;
+  font-size: 1.8rem;
+}
+
+.panel-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.panel-span {
+  grid-column: 1 / -1;
+}
+
+.panel-head,
+.wrap,
+.action-row,
+.upload-inline,
+.list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.wrap,
+.upload-inline {
+  flex-wrap: wrap;
+}
+
+.list-stack,
+.form-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.form-grid,
+.review-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.list-item,
+.review-block {
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.review-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.review-block {
+  display: grid;
+  gap: 12px;
+}
+
+.upload-hint {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.analysis-hero h2 {
+  margin: 0;
+  max-width: 900px;
+  font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+}
+
+.analysis-overview {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 18px;
+}
+
+.analysis-score-card,
+.analysis-meta-card {
+  border-radius: 26px;
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.analysis-score-card {
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.analysis-score-card strong {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.score-label,
+.meta-label {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
+.analysis-meta-card {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.plain-pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font: inherit;
+  line-height: 1.7;
+}
+
+.action-row {
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+@media (max-width: 1100px) {
+  .career-shell,
+  .stats-grid,
+  .panel-grid,
+  .form-grid,
+  .review-grid,
+  .analysis-overview,
+  .analysis-meta-card {
+    grid-template-columns: 1fr;
+  }
+}
